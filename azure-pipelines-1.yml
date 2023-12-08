@@ -1,0 +1,17 @@
+# Starter pipeline
+
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: AzureWebAppContainer@1
+  inputs:
+    azureSubscription: 'Azure for Students Starter(03612e11-bdc7-4d38-a98c-94fd90334096)'
+    appName: 'as-lluna'
